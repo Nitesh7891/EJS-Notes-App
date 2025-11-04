@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> - My Notes</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-zinc-900 text-white font-sans min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-zinc-800 shadow-lg p-5 sticky top-0 z-50 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-400 tracking-tight">📝 My Notes</h1>
+    <a href="/" class="text-blue-400 hover:text-blue-300 underline transition-colors">← Back to Home</a>
+  </header>
+
+  <!-- Content -->
+  <main class="flex-grow flex items-center justify-center px-5">
+    <div class="max-w-2xl w-full bg-zinc-800/70 backdrop-blur-md border border-zinc-700 rounded-2xl shadow-lg p-8 mt-10">
+      <h1 class="text-4xl font-bold text-white tracking-tight mb-4 break-words"><%= title.replace(".txt","") %></h1>
+      <p class="text-zinc-300 text-lg leading-relaxed whitespace-pre-line"><%= description %></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-zinc-600 text-sm py-6">
+    <p>© <%= new Date().getFullYear() %> My Notes | Powered by Express & EJS</p>
+  </footer>
+
+</body>
+</html>
